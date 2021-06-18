@@ -1,0 +1,79 @@
+@font-face {
+    font-family: expressway;
+    src: url(fonts/expressway\ rg.ttf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: expressway;
+}
+
+body {
+    background-color: #023047;
+    color: #8d99ae;
+    font-size: 1em;
+}
+
+
+/* ul {
+    list-style-type: none;
+    overflow: hidden;
+    float: right;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    color: #90e0ef !important;
+} */
+
+.title {
+    font-size: 72px;
+}
+
+.cyan {
+    color: #90e0ef !important;
+}
+
+.white {
+    color: white;
+}
+
+.about-content {
+    padding-top: 20%;
+    padding-bottom: 40%;
+    color: #8d99ae;
+}
+
+.experience-content {
+    padding-top: 20%;
+    padding-bottom: 20%;
+    color: #8d99ae;
+}
+
+.full-width {
+    max-width: 100%;
+}
+
+@media only screen and (max-width: 900px) {
+    .title {
+        font-size: 50px;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .title {
+        font-size: 20px;
+    }
+}
