@@ -39,7 +39,7 @@ body {
     color: #8d99ae;
 }
 
-.project-content{
+.project-content {
     padding-top: 20%;
     padding-bottom: 20%;
     color: #8d99ae;
@@ -47,6 +47,36 @@ body {
 
 .full-width {
     max-width: 100%;
+}
+
+.project-box {
+    border-bottom: 3px solid #90e0ef;
+    height: 250px;
+    width: 260px;
+    word-wrap: break-word;
+    margin: auto;
+    background-color: #033d5a;
+    color: #8d99ae;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.project-box:hover {
+    transition-duration: 0.2s;
+    transform: scale(1.1);
+    background-color: #044d72;
+}
+
+.link {
+    color: #8d99ae;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.link:hover {
+    color: #afbed6;
 }
 
 @media only screen and (max-width: 900px) {
