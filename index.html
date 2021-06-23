@@ -27,13 +27,13 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item">
-                                <a class="nav-link" href="#aboutme">+ About Me</a>
+                                <a class="nav-link" href="#aboutme">00 About Me</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#projects">+ Projects</a>
+                                <a class="nav-link" href="#projects">01 Projects</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#contact">+ Contact</a>
+                                <a class="nav-link" href="#contact">02 Contact</a>
                             </li>
                         </ul>
                     </div>
@@ -47,16 +47,16 @@
         <div class="container ">
             <div class="row about-content ">
                 <div class="col "></div>
-                <div class="col-lg-5 ">
+                <div class="col-lg-10">
                     <p class="cyan ">
                         Hello, my name is
                     </p>
                     <h1 class="white title ">Daniel Perez.</h1>
-                    <p>
+                    <h3>
                         More than 7 years of programming experience, with a deep understanding of a variety of different programming languages across a wide range of mediums from desktop level applications to web development full stack technologies including database management
                         and design.
-                    </p>
-                    <button type="button " class="btn btn-info ">Resume</button>
+                    </h3>
+                    <button type="button" style="margin-top: 50px; font-size: 1.5em;" class="btn btn-outline-primary btn-lg">Resume</button>
                 </div>
                 <div class="col "></div>
             </div>
@@ -89,15 +89,17 @@
             </div>
             <div ng-app='gitWidget' ng-controller="git" class="row project-content" id="projects">
                 <h1 class="cyan">Projects</h1>
-                <div ng-repeat='x in projects' class="col-lg-2 project-box rounded">
+                <div ng-repeat='x in projects' class="col-lg-2 project-box rounded position-relative">
                     <a href={{x.url}} class="link">
                         <h3>
 
                             {{x.repo}}
 
                         </h3>
+                        <div class="project-desc rounded">
                         <p>{{x.description}}</p>
-                        <p>{{x.languages}}</p>
+                        <p class="position-absolute bottom-0">{{x.languages}}</p>
+                    </div>
                     </a>
                 </div>
             </div>

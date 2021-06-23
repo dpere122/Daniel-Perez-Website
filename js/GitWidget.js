@@ -14,6 +14,7 @@ app.controller('git', function($scope, $http, $q) {
         for(let i = 0; i< $scope.projects.length; i++){
             $http({method:'GET', url: $scope.projects[i].languages}).then(function success(response){
                 $scope.projects[i].languages = extractToString(Object.keys(response.data));
+                // $scope.projects[i].languages = Object.keys(response.data);
             });
         }
     });

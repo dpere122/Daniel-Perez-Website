@@ -2,11 +2,15 @@
     font-family: expressway;
     src: url(fonts/expressway\ rg.ttf);
 }
+@font-face {
+    font-family: pixel;
+    src: url(fonts/Pixel12x10.ttf);
+}
 
 * {
     padding: 0;
     margin: 0;
-    font-family: expressway;
+    font-family: pixel;
 }
 
 body {
@@ -16,7 +20,7 @@ body {
 }
 
 .title {
-    font-size: 72px;
+    font-size: 8em;
 }
 
 .cyan {
@@ -65,6 +69,11 @@ body {
     transition-duration: 0.2s;
     transform: scale(1.1);
     background-color: #044d72;
+}
+.project-desc{
+    border: 2px solid grey;
+    height: 70%;
+    background-color: #03293b;
 }
 
 .link {
