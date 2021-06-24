@@ -2,6 +2,7 @@
     font-family: expressway;
     src: url(fonts/expressway\ rg.ttf);
 }
+
 @font-face {
     font-family: pixel;
     src: url(fonts/Pixel12x10.ttf);
@@ -10,7 +11,7 @@
 * {
     padding: 0;
     margin: 0;
-    font-family: pixel;
+    font-family: expressway;
 }
 
 body {
@@ -70,8 +71,10 @@ body {
     transform: scale(1.1);
     background-color: #044d72;
 }
-.project-desc{
+
+.project-desc {
     border: 2px solid grey;
+    border-style: groove;
     height: 70%;
     background-color: #03293b;
 }

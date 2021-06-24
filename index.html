@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>Daniel Perez</title>
@@ -27,13 +28,13 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item">
-                                <a class="nav-link" href="#aboutme">00 About Me</a>
+                                <a class="nav-link" href="#aboutme">- About Me</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#projects">01 Projects</a>
+                                <a class="nav-link" href="#projects">- Projects</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#contact">02 Contact</a>
+                                <a class="nav-link" href="#contact">- Contact</a>
                             </li>
                         </ul>
                     </div>
@@ -43,68 +44,71 @@
         </div>
     </div>
     <!-- Landing Page -->
-    <div>
-        <div class="container ">
-            <div class="row about-content ">
-                <div class="col "></div>
-                <div class="col-lg-10">
-                    <p class="cyan ">
-                        Hello, my name is
-                    </p>
-                    <h1 class="white title ">Daniel Perez.</h1>
-                    <h3>
-                        More than 7 years of programming experience, with a deep understanding of a variety of different programming languages across a wide range of mediums from desktop level applications to web development full stack technologies including database management
-                        and design.
-                    </h3>
-                    <button type="button" style="margin-top: 50px; font-size: 1.5em;" class="btn btn-outline-primary btn-lg">Resume</button>
-                </div>
-                <div class="col "></div>
+    <div class="container ">
+        <div class="row about-content ">
+            <div class="col "></div>
+            <div class="col-lg-10">
+                <p class="cyan ">
+                    Hello, my name is
+                </p>
+                <h1 class="white title ">Daniel Perez.</h1>
+                <h3>
+                    More than 7 years of programming experience, with a deep understanding of a variety of different programming languages across a wide range of mediums from desktop level applications to web development full stack technologies including database management
+                    and design.
+                </h3>
+                <button type="button" style="margin-top: 50px; font-size: 1.5em;" class="btn btn-outline-primary btn-lg">Resume</button>
             </div>
-            <div class="row experience-content" id="aboutme">
-                <div class="col">
+            <div class="col "></div>
+        </div>
+        <div class="row experience-content" id="aboutme">
+
+            <div class="col-lg-10">
+                <div class="row">
+                    <div class="col-lg-5 offset-lg-3">
+                        <h2 class="cyan">About Me:</h2>
+                    </div>
 
                 </div>
-                <div class="col-lg-4">
-                    <div>
+                <div class="row">
+                    <div class="col-lg-5 offset-lg-3">
                         <!-- Tech flows -->
                         <p>
                             Florida based developer graduated from Florida International University with a BA in Computer Science and a minor in Asian globalization and Latin American studies. Specializing in web development and its respective technologies for both the front and
-                            back end, my expertise in utilizing the Model View Controller with technologies like Spring Boot and Django to serve data to the front end user as well as knowledge of front-end technologies like AngularJS and Bootstrap making
-                            me a very dynamic and valuable asset to any development team.
+                            back end, my expertise in utilizing the Model View Controller with technologies like Spring Boot and Django to serve data to the front end user as well as knowledge of front-end technologies like AngularJS making me a very
+                            dynamic and valuable asset to any development team.
                         </p>
                         <!-- Background -->
                         <p>
-                            I was given the unique opportunity to leave my small town in my home country of Colombia in order to pursue my dreams.
+                            <!-- I was given the unique opportunity to leave my small town in my home country of Colombia in order to pursue my dreams. -->
                         </p>
                     </div>
-                </div>
-                <div class="col-lg-2">
-                    <div>
-                        <img src="https://via.placeholder.com/250" alt="">
+                    <div class="col-lg-3">
+                        <img src="images/port-me.png" alt="">
                     </div>
-                </div>
-                <div class="col">
-
                 </div>
             </div>
-            <div ng-app='gitWidget' ng-controller="git" class="row project-content" id="projects">
-                <h1 class="cyan">Projects</h1>
-                <div ng-repeat='x in projects' class="col-lg-2 project-box rounded position-relative">
-                    <a href={{x.url}} class="link">
-                        <h3>
 
-                            {{x.repo}}
+        </div>
+        <!-- PROJECTS TAB -->
+        <div ng-app='gitWidget' ng-controller="git" class="row project-content" id="projects">
+            <h1 class="cyan">Projects</h1>
+            <div ng-repeat='x in projects' class="col-lg-2 project-box rounded position-relative ">
+                <a href={{x.url}} class="link" ng-mouseenter="hover = true" ng-mouseleave="hover = false">
+                    <h3>
 
-                        </h3>
-                        <div class="project-desc rounded">
+                        {{x.repo}}
+
+                    </h3>
+                    <div class="project-desc rounded">
                         <p>{{x.description}}</p>
                         <p class="position-absolute bottom-0">{{x.languages}}</p>
+                        <h2><i id="folder" class="bi bi-folder2 position-absolute bottom-0 end-0" ng-class="{'bi-folder2-open': hover, 'bi-folder2': !hover}"></i></h2>
                     </div>
-                    </a>
-                </div>
+                </a>
             </div>
         </div>
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js " integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4 " crossorigin="anonymous "></script>
     <script src="js/GitWidget.js"></script>
 </body>
