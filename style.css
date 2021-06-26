@@ -97,6 +97,24 @@ body {
     color: #afbed6;
 }
 
+@media only screen and (min-width: 2000px) {
+    .about-content {
+        padding-top: 30%;
+        padding-bottom: 30%;
+        color: #8d99ae;
+    }
+    .experience-content {
+        padding-top: 30%;
+        padding-bottom: 30%;
+        color: #8d99ae;
+    }
+    .project-content {
+        padding-top: 30%;
+        padding-bottom: 30%;
+        color: #8d99ae;
+    }
+}
+
 @media only screen and (max-width: 900px) {
     .title {
         font-size: 50px;
