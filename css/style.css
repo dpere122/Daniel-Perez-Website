@@ -1,0 +1,132 @@
+@font-face {
+    font-family: expressway;
+    src: url(fonts/expressway\ rg.ttf);
+}
+
+@font-face {
+    font-family: pixel;
+    src: url(fonts/Pixel12x10.ttf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: expressway;
+}
+
+body {
+    background-color: #022030;
+    color: #8d99ae;
+    font-size: 1em;
+}
+
+.title {
+    font-size: 8em;
+}
+
+.cyan {
+    color: #90e0ef !important;
+}
+
+.white {
+    color: white;
+}
+
+.about-content {
+    padding-top: 20%;
+    padding-bottom: 20%;
+    color: #8d99ae;
+}
+
+.experience-content {
+    padding-top: 20%;
+    padding-bottom: 20%;
+    color: #8d99ae;
+}
+
+.project-content {
+    padding-top: 20%;
+    padding-bottom: 20%;
+    color: #8d99ae;
+}
+
+.contact-content {
+    padding-top: 30%;
+    padding-bottom: 30%;
+    color: inherit;
+}
+
+.full-width {
+    max-width: 100%;
+}
+
+.project-box {
+    border-bottom: 3px solid #90e0ef;
+    height: 300px;
+    width: 300px;
+    word-wrap: break-word;
+    margin: auto;
+    background-color: #033d5a;
+    color: #8d99ae;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.project-box:hover {
+    transition-duration: 0.2s;
+    transform: scale(1.1);
+    background-color: #044d72;
+}
+
+.project-desc {
+    border: 2px solid grey;
+    border-style: groove;
+    height: 70%;
+    background-color: #03293b;
+}
+
+.link {
+    color: #8d99ae;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.link:hover {
+    color: #afbed6;
+}
+
+.me-img {
+    width: 100%;
+}
+
+@media only screen and (min-width: 2000px) {
+    .about-content {
+        padding-top: 30%;
+        padding-bottom: 30%;
+        color: #8d99ae;
+    }
+    .experience-content {
+        padding-top: 30%;
+        padding-bottom: 30%;
+        color: #8d99ae;
+    }
+    .project-content {
+        padding-top: 30%;
+        padding-bottom: 30%;
+        color: #8d99ae;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .title {
+        font-size: 50px;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .title {
+        font-size: 20px;
+    }
+}
