@@ -3,11 +3,6 @@
     src: url(fonts/expressway\ rg.ttf);
 }
 
-@font-face {
-    font-family: pixel;
-    src: url(fonts/Pixel12x10.ttf);
-}
-
 * {
     padding: 0;
     margin: 0;
