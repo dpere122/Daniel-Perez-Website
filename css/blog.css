@@ -15,8 +15,32 @@ body {
     font-size: 1em;
 }
 
+.btn-group-xs>.btn,
+.btn-xs {
+    padding: .25rem .4rem;
+    font-size: .875rem;
+    line-height: .5;
+    border-radius: .2rem;
+}
+
 .blog-header {
     margin-top: 5rem;
     color: lightblue;
     margin-bottom: 1rem;
+}
+
+.preview-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    /* number of lines to show */
+    -webkit-box-orient: vertical;
+    display: block;
+}
+
+.post-edit-table {
+    font-size: 10px;
+    width: 100%;
+    color: black;
 }
