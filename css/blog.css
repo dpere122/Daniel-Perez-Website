@@ -44,3 +44,10 @@ body {
     width: 100%;
     color: black;
 }
+
+.editor-menu {
+    background-color: #8d99ae;
+    height: 40px;
+    color: black;
+    padding: 0px;
+}

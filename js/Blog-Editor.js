@@ -5,6 +5,11 @@ app.controller('create-post', function($scope, $http) {
     $scope.content = null;
     $scope.editMode = false;
     postID = null;
+
+    $scope.clearText = function() {
+        $scope.title = null;
+        $scope.content = null;
+    }
     $scope.loadPosts = function() {
         $http.get("http://localhost:8080/api/posts/getall")
             .then(function(response) {
