@@ -70,21 +70,23 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-2 offset-lg-2">
-                    <a type="button" name="submit" ng-click="postData(title,content)" style="margin-top: 50px; font-size: 1em;" class="btn btn-primary btn-lg">Send</a>
+                <div class="col-lg-4 offset-lg-2">
+                    <a type="button" name="submit" ng-click="postData(title,content)" ng-show="editMode == false" style="margin-top: 50px; font-size: 1em;" class="btn btn-primary btn-lg">Send</a>
+                    <a type="button" name="submit" ng-click="putData(title,content)" ng-show="editMode" style="margin-top: 50px; font-size: 1em;" class="btn btn-warning btn-lg">Confirm Edit</a>
+                    <a type="button" name="submit" ng-click="editMode = false" ng-show="editMode" style="margin-top: 50px; font-size: 1em;" class="btn btn-danger btn-lg">Cancel Edit</a>
                 </div>
                 <div class="col-lg-2">
-                    <a type="button" ng-click="loadPosts()" name="submit" data-bs-toggle="modal" data-bs-target="#exampleModal" style="margin-top: 50px; font-size: 1em;" class="btn btn-primary btn-lg">Edit or Delete</a>
+                    <a type="button" ng-click="loadPosts()" name="submit" data-bs-toggle="modal" data-bs-target="#editModal" style="margin-top: 50px; font-size: 1em;" class="btn btn-primary btn-lg">Edit or Delete</a>
                 </div>
             </div>
         </form>
 
         <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="mLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Edit/Delete</h5>
+                        <h5 class="modal-title" id="mLabel">Edit/Delete</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -102,7 +104,7 @@
                                     {{post.title}}
                                 </td>
                                 <td>
-                                    <button type="button" class="btn btn-warning btn-xs">Edit</button>
+                                    <button type="button" ng-click="setText(post)" class="btn btn-warning btn-xs" data-bs-dismiss="modal">Edit</button>
                                     <button type="button" ng-click="deletePost(post.id);posts.splice($index,1)" class="btn btn-danger btn-xs">Delete</button>
                                 </td>
                             </tr>

@@ -36,7 +36,7 @@ body {
     -webkit-line-clamp: 5;
     /* number of lines to show */
     -webkit-box-orient: vertical;
-    display: block;
+    /* display: block; */
 }
 
 .post-edit-table {
