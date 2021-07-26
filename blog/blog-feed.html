@@ -60,12 +60,11 @@
         <!-- Data gets called from database -->
         <!-- Display the post on the single page or load a new page for each post? -->
         <div ng:repeat="post in posts" class="row justify-content-center">
-            <div class="col-lg-8 rounded blog-header preview-Item rounded-3" onclick="document.getElementById('post').style.display = 'block';">
+            <div class="col-lg-8 rounded blog-header preview-Item rounded-3" ng-click="savePost(post)">
                 <h2 style="border-bottom: 2px solid silver">
                     {{post.title}}
                 </h2>
-                <div class="preview-text" id="post" ng-bind-html="post.content">
-                </div>
+                <div class="preview-text" id="post" ng-bind-html="post.content"></div>
             </div>
         </div>
     </div>

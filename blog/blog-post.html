@@ -45,7 +45,7 @@
         </div>
 
     </div>
-    <div class="container" ng-app="blog-feed" ng-controller="feed-controller">
+    <div class="container" ng-app="blog-feed" ng-controller="post-controller" ng-init="loadPost()">
         <div class="row  blog-header justify-content-center">
             <div class="col-lg-4 text-center border-bottom">
                 <h1>
@@ -56,6 +56,14 @@
                 </h3>
             </div>
 
+        </div>
+        <div class="row">
+            <div class="col-lg-8 rounded blog-header">
+                <h2>
+                    {{curPost.title}}
+                </h2>
+                <div ng-bind-html="curPost.content"></div>
+            </div>
         </div>
 
     </div>
