@@ -56,19 +56,53 @@
         </div>
         <form>
             <div class="row">
-                <div class="col-lg-8 offset-lg-2">
+                <div class="col-lg-8 offset-lg-2 " style="padding: 0px;">
                     <input ng-model="title" style="width: 100%; font-size: x-large;" placeholder="Title"></input>
                 </div>
             </div>
             <!-- MENU ITEMS -->
             <div class="row">
                 <div class="col-lg-8 offset-lg-2 editor-menu">
-                    List of items
+                    <button title="bold" class="bi bi-type-bold" onclick="formatDoc('bold')"></button>
+                    <button title="italic" class="bi bi-type-italic" onclick="formatDoc('italic')"></button>
+                    <button title="underline" class="bi bi-type-underline" onclick="formatDoc('underline')"></button>
+                    <button title="undo" class="bi bi-arrow-counterclockwise" onclick="formatDoc('undo')"></button>
+                    <button title="redo" class="bi bi-arrow-clockwise" onclick="formatDoc('redo')"></button>
+                    <button title="remove format" class="bi bi-eraser" onclick="formatDoc('removeFormat')"></button>
+                    <button title="justify left" class="bi bi-text-left" onclick="formatDoc('justifyleft')"></button>
+                    <button title="justify center" class="bi bi-text-center" onclick="formatDoc('justifyCenter')"></button>
+                    <button title="justify right" class="bi bi-text-right" onclick="formatDoc('justifyright')"></button>
+                    <button title="numbered list" class="bi bi-list-ol" onclick="formatDoc('insertorderedlist')"></button>
+                    <button title="bullet point list" class="bi bi-list-ul" onclick="formatDoc('insertunorderedlist')"></button>
+                    <button title="indent left" class="bi bi-text-indent-left" onclick="formatDoc('indent')"></button>
+                    <button title="indent right" class="bi bi-text-indent-right" onclick="formatDoc('outdent')"></button>
+                    <button title="hyperlink" class="bi bi-link" onclick="var sLnk=prompt('Write the URL here','http:\/\/');if(sLnk&&sLnk!=''&&sLnk!='http://'){formatDoc('createlink',sLnk)}"></button>
+                    <select onchange="formatDoc('fontsize',this[this.selectedIndex].value);this.selectedIndex=0;">
+                        <option class="heading" selected>- normal -</option>
+                        <option value="1">Very small</option>
+                        <option value="2">A bit small</option>
+                        <option value="3">Normal</option>
+                        <option value="4">Medium-large</option>
+                        <option value="5">Big</option>
+                        <option value="6">Very big</option>
+                        <option value="7">Maximum</option>
+                        </select>
+                    <select onchange="formatDoc('formatblock',this[this.selectedIndex].value);this.selectedIndex=0;">
+                            <option selected>- formatting -</option>
+                            <option value="h1">Title 1 &lt;h1&gt;</option>
+                            <option value="h2">Title 2 &lt;h2&gt;</option>
+                            <option value="h3">Title 3 &lt;h3&gt;</option>
+                            <option value="h4">Title 4 &lt;h4&gt;</option>
+                            <option value="h5">Title 5 &lt;h5&gt;</option>
+                            <option value="h6">Subtitle &lt;h6&gt;</option>
+                            <option value="p">Paragraph &lt;p&gt;</option>
+                            <option value="pre">Preformatted &lt;pre&gt;</option>
+                            </select>
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-8 offset-lg-2">
-                    <textarea ng-model="content" style="height: 500px; width: 100%;" placeholder="Content"></textarea>
+                <div class="col-lg-8 offset-lg-2" style="padding: 0px;">
+                    <div id="textContent" ng-model="content" contenteditable placeholder="Content"></div>
                 </div>
             </div>
             <div class="row">

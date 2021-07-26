@@ -27,13 +27,15 @@ body {
     margin-top: 5rem;
     color: lightblue;
     margin-bottom: 1rem;
+    padding: 1rem;
 }
 
 .preview-text {
+    white-space: pre-line;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 5;
+    -webkit-line-clamp: 4;
     /* number of lines to show */
     -webkit-box-orient: vertical;
     /* display: block; */
@@ -47,7 +49,25 @@ body {
 
 .editor-menu {
     background-color: #8d99ae;
-    height: 40px;
+    height: 50px;
+    padding-top: 10px;
     color: black;
-    padding: 0px;
+}
+
+.preview-Item {
+    border: 1px solid black;
+    background-color: #003958;
+}
+
+.preview-Item:hover {
+    background-color: #004f79;
+    cursor: pointer;
+}
+
+#textContent {
+    height: 500px;
+    width: 100%;
+    background-color: white;
+    color: black;
+    overflow: auto;
 }

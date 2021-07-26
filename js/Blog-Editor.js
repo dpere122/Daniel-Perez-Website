@@ -1,5 +1,27 @@
 var app = angular.module('blog-editor', []);
 
+
+app.directive("contenteditable", function() {
+    return {
+        restrict: "A",
+        require: "ngModel",
+        link: function(scope, element, attrs, ngModel) {
+
+            function read() {
+                ngModel.$setViewValue(element.html());
+            }
+
+            ngModel.$render = function() {
+                element.html(ngModel.$viewValue || "");
+            };
+
+            element.bind("blur keyup change", function() {
+                scope.$apply(read);
+            });
+        }
+    };
+});
+
 app.controller('create-post', function($scope, $http) {
     $scope.title = null;
     $scope.content = null;
@@ -29,6 +51,7 @@ app.controller('create-post', function($scope, $http) {
             });
     };
     $scope.postData = function(title, content) {
+        console.log(content);
         var data = {
             title: title,
             content: content
@@ -67,3 +90,9 @@ app.controller('create-post', function($scope, $http) {
         }
     }
 });
+
+
+
+function formatDoc(sCmd, sValue) {
+    document.execCommand(sCmd, false, sValue);
+}
